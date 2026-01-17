@@ -23,21 +23,21 @@ Although the tool was built for a specific game, the analysis pipeline is generi
 
 ### Economic model and balancing
 
-The CSV sources used by the analyzer represent a **balancing model**, not just static thresholds.
+The CSV sources consumed by the analyzer represent a **balancing model**, not a set of static thresholds.
 
 For example, the Economy sheet defines:
 - recommended resource levels
 - acceptable deviation ranges
 - warning and critical thresholds
 
-These values act as a reference model for the intended game balance.
+Together, these values describe the intended economic balance of the game.
 
 By combining:
 - telemetry snapshots produced by the game runtime
 - external balancing data (CSV / Sheets)
-- automated analysis rules
+- deterministic analysis rules
 
-the tool allows validating whether the current game state aligns with the intended economic model.
+the tool validates whether the observed game state aligns with the intended design.
 
 In practice, this analysis is used to:
 - tune resource availability
@@ -45,7 +45,11 @@ In practice, this analysis is used to:
 - validate reachability and progression pacing
 - iteratively refine game configuration without manual inspection
 
-This creates a feedback loop between telemetry, balancing data, and game configuration.
+The analyzer consumes the same economic model that is used to configure the game runtime.  
+It does **not** modify the model and does **not** influence gameplay parameters directly.
+
+Instead, it highlights deviations between the intended balance and the observed game state,
+forming a controlled feedback loop between telemetry, balancing data, and configuration decisions.
 
 ---
 
