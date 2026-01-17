@@ -14,6 +14,7 @@ The goal of testing in this project is to validate:
 
 Tests are organized by responsibility and mirror the main project structure:
 
+```txt
 Tests
 ├─ Analysis
 │ ├─ AnalyzerRunnerTests
@@ -31,6 +32,7 @@ Tests
 ├─ TestTelemetryRunBuilder
 ├─ TestRunConfigBuilder
 └─ TestSnapshotBuilder
+```
 
 ---
 
