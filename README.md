@@ -47,6 +47,7 @@ In practice, this analysis is used to:
 
 This creates a feedback loop between telemetry, balancing data, and game configuration.
 
+---
 
 ## Overview
 
