@@ -1,6 +1,6 @@
 {
   "Discord": {
-    "Enabled": true,
+    "Enabled": false,
     "WebhookUrl": "__DISCORD_WEBHOOK_URL__",
     "Message": {
       "Title": "Analysis completed",

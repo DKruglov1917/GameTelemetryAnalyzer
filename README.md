@@ -180,9 +180,12 @@ Analyzer execution is deterministic and order-independent.
 
 ## CLI usage
 Supported command-line options:
---no-discord
---only Economy,Reachability
---exclude Reachability
+```txt
+--discord        Enable Discord delivery
+--console        Print report to console
+--only           Run only selected analyzers
+--exclude        Exclude selected analyzers
+```
 
 
 Analyzer names are case-insensitive.

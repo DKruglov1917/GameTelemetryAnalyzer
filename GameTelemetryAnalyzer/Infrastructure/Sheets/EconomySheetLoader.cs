@@ -15,6 +15,16 @@ public sealed class EconomySheetLoader
 
     public async Task<List<EconomyRow>> Load(string url)
     {
+        if (string.IsNullOrWhiteSpace(url))
+            throw new InvalidOperationException(
+                "Economy sheet URL is missing"
+            );
+
+        if (!Uri.TryCreate(url, UriKind.Absolute, out var uri))
+            throw new InvalidOperationException(
+                "Economy sheet URL is not a valid absolute URI"
+            );
+        
         var csvText = await _http.GetStringAsync(url);
 
         using var reader = new StringReader(csvText);

@@ -3,37 +3,35 @@ using GameTelemetryAnalyzer.Domain;
 using GameTelemetryAnalyzer.Delivery;
 
 namespace GameTelemetryAnalyzer.Infrastructure.Notifications;
-public interface IMessageFormatter
-{
-    string Format(
-        TelemetryReport report,
-        DiscordMessageTemplate template);
-}
 
-public class DiscordMessageFormatter : IMessageFormatter
+public sealed class TextReportFormatter : IReportFormatter
 {
-    public string Format(TelemetryReport report, DiscordMessageTemplate template)
+    private readonly DiscordMessageTemplate _template;
+
+    public TextReportFormatter(DiscordMessageTemplate template)
+    {
+        _template = template;
+    }
+    public string Format(TelemetryReport report)
     {
         var sb = new StringBuilder();
 
-        sb.AppendLine(template.Title);
+        sb.AppendLine(_template.Title);
 
         var unix = report.RunTimestamp.ToUnixTimeSeconds();
-        sb.AppendLine($"{template.Header} <t:{unix}:F>");
+        sb.AppendLine($"{_template.Header} <t:{unix}:F>");
 
         var sections = BuildSections(report);
 
         var body = new StringBuilder();
-        RenderSections(body, sections, template);
+        RenderSections(body, sections, _template);
 
         var content = body.ToString();
 
-        if (template.WrapInCodeBlock)
+        if (_template.WrapInCodeBlock)
             content = $"```txt\n{content}\n```";
 
         sb.Append(content);
-        
-        sb.AppendLine("\u200B"); // Zero-width space for Discord message separation
 
         return sb.ToString();
     }

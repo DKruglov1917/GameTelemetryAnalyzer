@@ -4,12 +4,14 @@ namespace GameTelemetryAnalyzer.Application;
 
 public sealed record CliOptions(
     bool SendToDiscord,
+    bool PrintToConsole,
     IReadOnlySet<string> Only,
     IReadOnlySet<string> Exclude)
 {
     public static CliOptions Parse(string[] args)
     {
-        bool sendToDiscord = true;
+        bool printToConsole = true;
+        bool sendToDiscord = false;
 
         var only = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
         var exclude = new HashSet<string>(StringComparer.OrdinalIgnoreCase);
@@ -20,8 +22,12 @@ public sealed record CliOptions(
 
             switch (arg)
             {
-                case "--no-discord":
-                    sendToDiscord = false;
+                case "--no-console":
+                    printToConsole = false;
+                    break;
+                
+                case "--discord":
+                    sendToDiscord = true;
                     break;
 
                 case "--only":
@@ -37,7 +43,11 @@ public sealed record CliOptions(
             }
         }
 
-        return new CliOptions(sendToDiscord, only, exclude);
+        return new CliOptions(
+            sendToDiscord,
+            printToConsole,
+            only,
+            exclude);
     }
 
     /// <summary>
