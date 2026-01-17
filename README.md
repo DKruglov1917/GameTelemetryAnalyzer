@@ -65,6 +65,8 @@ At a high level, the application performs the following steps:
 ## Architecture
 
 The project is structured into separated layers:
+
+```txt
 Domain
 ├─ Core models and invariants
 ├─ Telemetry input model
@@ -85,6 +87,7 @@ Infrastructure
 ├─ CSV / Sheets ingestion
 ├─ Discord delivery
 └─ Message formatting
+```
 
 ---
 
