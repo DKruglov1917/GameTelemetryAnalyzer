@@ -23,7 +23,7 @@ Although the tool was built for a specific game, the analysis pipeline is generi
 
 ### Economic model and balancing
 
-The CSV sources consumed by the analyzer represent a **balancing model**, not a set of static thresholds.
+The CSV sources consumed by the analyzer represent a **balancing model**.
 
 For example, the Economy sheet defines:
 - recommended resource levels
