@@ -1,0 +1,37 @@
+{
+  "Economy": {
+    "resources": {
+      "bp_FuelRod": {
+        "recommended": 120,
+        "thresholds": {
+          "warning": 20,
+          "critical": 40
+        }
+      },
+      "bp_Fuse": {
+        "recommended": 40,
+        "thresholds": {
+          "warning": 10,
+          "critical": 20
+        }
+      }
+    }
+  },
+  "Reachability": {
+    "Thresholds": {
+      "Warning": 50000,
+      "Critical": 70000
+    },
+    "AccessBaseline": {
+      "OneWayOnFoot": 5000,
+      "TwoWayOnFoot": 12000,
+      "TwoWayByCar": 36000
+    },
+    "DangerLevel": {
+      "None": 0,
+      "Low": 10,
+      "Medium": 25,
+      "Hard": 50
+    }
+  }
+}

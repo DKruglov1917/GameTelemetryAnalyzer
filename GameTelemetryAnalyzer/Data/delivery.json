@@ -1,0 +1,21 @@
+{
+  "Discord": {
+    "Enabled": true,
+    "WebhookUrl": "__DISCORD_WEBHOOK_URL__",
+    "Message": {
+      "Title": "Analysis completed",
+      "Header": "Run time:",
+      "SnapshotHeader": "Snapshot: {Type}",      
+      "ExecutedHeader": "Executed tests:",
+      "SectionHeaderFormat": "{title}:",
+      "ItemPrefixOk": "Ok:",
+      "ItemPrefixWarning": "Warning:",
+      "ItemPrefixCritical": "Critical:",
+      "Indent": "    ",
+      "HideOkBlocks": true,
+      "HideEmptySeverityBlocks": true,
+      "HideEmptySections": true,
+      "WrapInCodeBlock": true
+    }
+  }
+}

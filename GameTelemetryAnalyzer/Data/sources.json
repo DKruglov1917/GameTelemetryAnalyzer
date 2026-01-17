@@ -1,0 +1,6 @@
+{
+  "Sheets": {
+    "Economy": "__ECONOMY_SHEET_URL__",
+    "Reachability": "__REACHABILITY_SHEET_URL__"
+  }
+}

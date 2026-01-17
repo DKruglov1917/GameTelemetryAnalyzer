@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameTelemetryAnalyzer", "GameTelemetryAnalyzer\GameTelemetryAnalyzer.csproj", "{B5E51092-3505-47E1-BAE6-DBD5A87E8510}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameTelemetryAnalyzer.Analysis", "GameTelemetryAnalyzer.Analysis\GameTelemetryAnalyzer.Analysis.csproj", "{1EC18C01-B02C-4741-83B1-F2C074D14237}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameTelemetryAnalyzer.Domain", "GameTelemetryAnalyzer.Domain\GameTelemetryAnalyzer.Domain.csproj", "{AA14997C-CE24-42C3-80E8-F516F879B98A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{3913A55F-79F5-43AD-9A00-F7710F574873}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B5E51092-3505-47E1-BAE6-DBD5A87E8510}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5E51092-3505-47E1-BAE6-DBD5A87E8510}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5E51092-3505-47E1-BAE6-DBD5A87E8510}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5E51092-3505-47E1-BAE6-DBD5A87E8510}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1EC18C01-B02C-4741-83B1-F2C074D14237}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EC18C01-B02C-4741-83B1-F2C074D14237}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EC18C01-B02C-4741-83B1-F2C074D14237}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EC18C01-B02C-4741-83B1-F2C074D14237}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA14997C-CE24-42C3-80E8-F516F879B98A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA14997C-CE24-42C3-80E8-F516F879B98A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA14997C-CE24-42C3-80E8-F516F879B98A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA14997C-CE24-42C3-80E8-F516F879B98A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3913A55F-79F5-43AD-9A00-F7710F574873}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3913A55F-79F5-43AD-9A00-F7710F574873}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3913A55F-79F5-43AD-9A00-F7710F574873}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3913A55F-79F5-43AD-9A00-F7710F574873}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

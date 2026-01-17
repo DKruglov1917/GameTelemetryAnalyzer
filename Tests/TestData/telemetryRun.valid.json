@@ -1,0 +1,172 @@
+{
+  "runInfo":
+  {
+    "runId": "UE_20260114_130649",
+    "generatedAtUtc": "2026-01-14T13:06:49.124Z",
+    "source": "UnrealRuntime"
+  },
+  "snapshot":
+  {
+    "poiMetrics": [
+      {
+        "label": "PoI_4",
+        "id": "StaticMeshActor_UAID_D85ED38D67E1345A02_1987289724",
+        "accessType": "OneWayOnFoot",
+        "distanceToBase": 22947.60546875
+      },
+      {
+        "label": "PoI_10",
+        "id": "StaticMeshActor_UAID_D85ED38D67E1345A02_2000713731",
+        "accessType": "OneWayOnFoot",
+        "distanceToBase": 67922.21875
+      },
+      {
+        "label": "PoI_2",
+        "id": "StaticMeshActor_UAID_D85ED38D67E1345A02_1983579722",
+        "accessType": "OneWayOnFoot",
+        "distanceToBase": 30358.935546875
+      },
+      {
+        "label": "PoI_16",
+        "id": "StaticMeshActor_UAID_D85ED38D67E1345A02_2012930738",
+        "accessType": "OneWayOnFoot",
+        "distanceToBase": 44042.78125
+      },
+      {
+        "label": "PoI_7",
+        "id": "StaticMeshActor_UAID_D85ED38D67E1345A02_1994025728",
+        "accessType": "OneWayOnFoot",
+        "distanceToBase": 45490.43359375
+      },
+      {
+        "label": "PoI_14",
+        "id": "StaticMeshActor_UAID_D85ED38D67E1345A02_2008023735",
+        "accessType": "OneWayOnFoot",
+        "distanceToBase": 104098.4921875
+      },
+      {
+        "label": "PoI_5",
+        "id": "StaticMeshActor_UAID_D85ED38D67E1345A02_1990906726",
+        "accessType": "OneWayOnFoot",
+        "distanceToBase": 25306.1640625
+      },
+      {
+        "label": "PoI_12",
+        "id": "StaticMeshActor_UAID_D85ED38D67E1345A02_2004002733",
+        "accessType": "OneWayOnFoot",
+        "distanceToBase": 101409.84375
+      },
+      {
+        "label": "PoI_11",
+        "id": "StaticMeshActor_UAID_D85ED38D67E1345A02_2002580732",
+        "accessType": "OneWayOnFoot",
+        "distanceToBase": 52374.86328125
+      },
+      {
+        "label": "PoI_17",
+        "id": "StaticMeshActor_UAID_D85ED38D67E1345A02_2014675739",
+        "accessType": "OneWayOnFoot",
+        "distanceToBase": 27818.521484375
+      },
+      {
+        "label": "PoI_3",
+        "id": "StaticMeshActor_UAID_D85ED38D67E1345A02_1985625723",
+        "accessType": "OneWayOnFoot",
+        "distanceToBase": 57558.015625
+      },
+      {
+        "label": "PoI_8",
+        "id": "StaticMeshActor_UAID_D85ED38D67E1345A02_1995703729",
+        "accessType": "OneWayOnFoot",
+        "distanceToBase": 71573.1640625
+      },
+      {
+        "label": "PoI_6",
+        "id": "StaticMeshActor_UAID_D85ED38D67E1345A02_1992427727",
+        "accessType": "OneWayOnFoot",
+        "distanceToBase": 61345.89453125
+      },
+      {
+        "label": "PoI_0",
+        "id": "LocationMark_Blueprint_C_UAID_D85ED38D67E1345A02_2101445742",
+        "accessType": "OneWayOnFoot",
+        "distanceToBase": 55485.29296875
+      },
+      {
+        "label": "PoI_9",
+        "id": "StaticMeshActor_UAID_D85ED38D67E1345A02_1997564730",
+        "accessType": "OneWayOnFoot",
+        "distanceToBase": 40797.50390625
+      },
+      {
+        "label": "PoI_18",
+        "id": "StaticMeshActor_UAID_D85ED38D67E1345A02_2017739740",
+        "accessType": "OneWayOnFoot",
+        "distanceToBase": 36200.1015625
+      },
+      {
+        "label": "PoI_13",
+        "id": "StaticMeshActor_UAID_D85ED38D67E1345A02_2005962734",
+        "accessType": "OneWayOnFoot",
+        "distanceToBase": 68187.4140625
+      },
+      {
+        "label": "PoI_15",
+        "id": "StaticMeshActor_UAID_D85ED38D67E1345A02_2011310737",
+        "accessType": "OneWayOnFoot",
+        "distanceToBase": 66343.640625
+      },
+      {
+        "label": "PoI_1",
+        "id": "StaticMeshActor_UAID_D85ED38D67E1345A02_1981216721",
+        "accessType": "OneWayOnFoot",
+        "distanceToBase": 50905.80078125
+      }
+    ],
+    "availableResources": [
+      {
+        "resourceId": "bp_FuelRod",
+        "amount": 9
+      },
+      {
+        "resourceId": "bp_Fuse",
+        "amount": 3
+      }
+    ],
+    "electricityMetrics": [
+      {
+        "nodeId": "Node_A",
+        "produced": 1200,
+        "consumed": 800
+      }
+    ],
+    "enemySpawnerMetrics": [
+      {
+        "spawnerId": "Spawner_01",
+        "enemyType": "Zombie",
+        "maxAlive": 6
+      }
+    ],
+    "weatherMetrics": [
+      {
+        "zoneId": "Zone_02",
+        "weatherType": "Blizzard",
+        "temperatureC": -12.5
+      }
+    ]
+  },
+  "runtimeEvents":
+  {
+    "mainlandEvents": [
+      {
+        "time": 15.25,
+        "type": "Spawned",
+        "entityId": "Enemy_123",
+        "poiId": ""
+      }
+    ],
+    "weatherEvents": [],
+    "economyEvents": [],
+    "enemyEvents": []
+  }
+}
