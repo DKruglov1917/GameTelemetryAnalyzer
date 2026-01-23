@@ -25,9 +25,9 @@ public sealed class EconomyAnalyzer
             );
         }
 
-        int expected = rule.Recommended;
-        int actual = metric.Amount;
-        int delta = Math.Abs(actual - expected);
+        float expected = rule.Recommended;
+        float actual = metric.Amount;
+        float delta = Math.Abs(actual - expected);
 
         Severity severity =
             rule.Thresholds.Evaluate(delta);

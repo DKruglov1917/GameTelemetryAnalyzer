@@ -1,30 +1,66 @@
-﻿using GameTelemetryAnalyzer.Domain;
-using GameTelemetryAnalyzer.Infrastructure.Sheets.Rows;
+﻿using System.Globalization;
+using GameTelemetryAnalyzer.Domain;
+using GameTelemetryAnalyzer.Infrastructure.Sheets;
 
 namespace GameTelemetryAnalyzer.Application;
 
 public static class RunConfigBuilder
 {
-    public static Economy BuildEconomy(IEnumerable<EconomyRow> rows)
+    public static RunConfig Build(SectionSheet sheet)
     {
-        return new Economy
+        var economy = BuildEconomy(
+            sheet.Require("ECONOMY_RESOURCES_BASE"),
+            sheet.Require("ECONOMY_RESOURCES_THRESHOLDS")
+        );
+
+        var reachMap = new Dictionary<string, int>();
+
+        foreach (var kv in sheet.Require("REACHABILITY"))
+            reachMap[kv.Key] = int.Parse(kv.Value, CultureInfo.InvariantCulture);
+
+        foreach (var kv in sheet.Require("DANGER_LEVEL"))
+            reachMap[kv.Key] = int.Parse(kv.Value, CultureInfo.InvariantCulture);
+
+        var reachability = BuildReachability(reachMap);
+
+        return new RunConfig
         {
-            Resources = rows.ToDictionary(
-                r => r.ResourceId,
-                r => new ResourceRule
-                {
-                    Recommended = r.Recommended,
-                    Thresholds = new Thresholds
-                    {
-                        Warning = r.Warning,
-                        Critical = r.Critical
-                    }
-                }
-            )
+            Economy = economy,
+            Reachability = reachability
         };
     }
     
-    public static Reachability BuildReachability(
+    private static Economy BuildEconomy(
+        IReadOnlyDictionary<string, string> baseResources,
+        IReadOnlyDictionary<string, string> thresholds)
+    {
+        if (!thresholds.TryGetValue("Threshold.Warning", out var warnRaw))
+            throw new InvalidOperationException("Missing Threshold.Warning");
+
+        if (!thresholds.TryGetValue("Threshold.Critical", out var critRaw))
+            throw new InvalidOperationException("Missing Threshold.Critical");
+
+        var warning  = float.Parse(warnRaw, CultureInfo.InvariantCulture);
+        var critical = float.Parse(critRaw, CultureInfo.InvariantCulture);
+
+        return new Economy
+        {
+            Resources = baseResources.ToDictionary(
+                kv => kv.Key,
+                kv => new ResourceRule
+                {
+                    Recommended = float.Parse(kv.Value, CultureInfo.InvariantCulture),
+                    Thresholds = new Thresholds
+                    {
+                        Warning  = warning,
+                        Critical = critical
+                    }
+                })
+        };
+    }
+
+    
+    private static Reachability BuildReachability(
         IReadOnlyDictionary<string, int> map)
     {
         return new Reachability

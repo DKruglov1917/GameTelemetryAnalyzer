@@ -27,7 +27,7 @@ public sealed class Economy
 
 public sealed class ResourceRule
 {
-    public required int Recommended { get; init; }
+    public required float Recommended { get; init; }
     public required Thresholds Thresholds { get; init; }
 }
 
@@ -40,8 +40,8 @@ public sealed class Reachability
 
 public sealed class Thresholds
 {
-    public required int Warning { get; init; }
-    public required int Critical { get; init; }
+    public required float Warning { get; init; }
+    public required float Critical { get; init; }
     
     public Severity Evaluate(float delta)
     {

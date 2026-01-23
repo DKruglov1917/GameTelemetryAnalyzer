@@ -7,6 +7,5 @@ public sealed class SourcesConfig
 
 public sealed class SheetsSources
 {
-    public required string Economy { get; init; }
-    public required string Reachability { get; init; }
+    public required string Url { get; init; }
 }

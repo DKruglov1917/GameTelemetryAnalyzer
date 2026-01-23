@@ -1,8 +1,8 @@
 {
   "runInfo":
   {
-    "runId": "UE_20260114_130649",
-    "generatedAtUtc": "2026-01-14T13:06:49.124Z",
+    "runId": "UE_20260122_234749",
+    "generatedAtUtc": "2026-01-22T23:47:49.499Z",
     "source": "UnrealRuntime"
   },
   "snapshot":
@@ -125,11 +125,11 @@
     ],
     "availableResources": [
       {
-        "resourceId": "bp_FuelRod",
+        "resourceId": "FuelRod",
         "amount": 9
       },
       {
-        "resourceId": "bp_Fuse",
+        "resourceId": "Fuse",
         "amount": 3
       }
     ],

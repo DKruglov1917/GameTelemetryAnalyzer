@@ -1,6 +1,5 @@
 {
   "Sheets": {
-    "Economy": "https://docs.google.com/spreadsheets/d/e/2PACX-1vT0Qg6g8Kx_JMZzNYbLWdjTfky9Ip0_zxvoXSnU7tgUAGjo3uN0LK6d0djb4pApyLi-_4bObvcOwx_g/pub?gid=0&single=true&output=csv",
-    "Reachability": "https://docs.google.com/spreadsheets/d/e/2PACX-1vT0Qg6g8Kx_JMZzNYbLWdjTfky9Ip0_zxvoXSnU7tgUAGjo3uN0LK6d0djb4pApyLi-_4bObvcOwx_g/pub?gid=885487772&single=true&output=csv"
+    "Url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vT0Qg6g8Kx_JMZzNYbLWdjTfky9Ip0_zxvoXSnU7tgUAGjo3uN0LK6d0djb4pApyLi-_4bObvcOwx_g/pub?gid=0&single=true&output=csv"
   }
 }

@@ -85,21 +85,10 @@ public sealed class TelemetryApp
 
     private async Task<RunConfig> BuildRunConfig(SourcesConfig sources)
     {
-        var economyRows = await new EconomySheetLoader(_http)
-            .Load(sources.Sheets.Economy);
+        var loader = new SectionSheetLoader(_http);
 
-        var economy = RunConfigBuilder.BuildEconomy(economyRows);
+        var sheet = await loader.Load(sources.Sheets.Url);
 
-        var reachRows = await new ReachabilitySheetLoader(_http)
-            .Load(sources.Sheets.Reachability);
-
-        var map = reachRows.ToDictionary(r => r.Key, r => r.Value);
-        var reachability = RunConfigBuilder.BuildReachability(map);
-
-        return new RunConfig
-        {
-            Economy = economy,
-            Reachability = reachability
-        };
+        return RunConfigBuilder.Build(sheet);
     }
 }
